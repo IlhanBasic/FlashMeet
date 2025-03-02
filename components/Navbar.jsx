@@ -267,7 +267,7 @@ export default function Navbar() {
                 {["Home", "About", "Contact", "Events"].map((item) => (
                   <li key={item} className="border-b border-gray-100 pb-2">
                     <Link
-                      href={`#${item.toLowerCase()}`}
+                      href={item==="Home" ? '/' :`${item.toLowerCase()}`}
                       className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-2 block"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
