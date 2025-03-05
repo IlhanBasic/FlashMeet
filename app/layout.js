@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import dotenv from "dotenv";
+dotenv.config();
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4844344743214501"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}`}
           crossorigin="anonymous"
         ></script>
       </head>
